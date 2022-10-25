@@ -30,7 +30,7 @@ public class EstadoController {
     }
 
     @GetMapping("/estado/modificar{idEstado}")
-    public String estadoModificar(Estado estado, Model model){
+    public String estadoModificar(Estado estado,Model model){
        estado=estadoService.getEstado(estado);
        model.addAttribute("estado",estado);
        return "modificarEstado";
