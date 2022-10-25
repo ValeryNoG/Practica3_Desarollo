@@ -13,7 +13,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     </head>
     <body>
         <link href="../static/css/estilo1.css" rel="stylesheet" type="text/css"/>
-        <!--   <header th:replace="layout/plantilla :: header"/> -->
+        <header th:replace="layout/plantilla :: header"/>
         <h2>Informacion de Paises</h2>
         <a th:href="@{/estado/nuevo}">Nuevo Estado</a>
         <div th:if="${estados !=null and !estados.empty}">
@@ -38,6 +38,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <div th:if="${estados ==null or estados.empty}">
             <h2>------------No hay paises que mostrar---------------</h2>
          </div>
-        <!--  <footer th:replace="layout/plantilla :: footer"/>-->
+        <footer th:replace="layout/plantilla :: footer"/>
     </body>
 </html>

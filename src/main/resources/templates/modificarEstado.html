@@ -8,38 +8,38 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <head>
         <title>Practica 3</title>
         <meta charset="UTF-8"/>
-        
+
     </head>
     <body>
         <link href="../static/css/estilo1.css" rel="stylesheet" type="text/css"/>
-         <h2>Informacion de clientes</h2>
+        <h2>Informacion de clientes</h2>
+        <header th:replace="layout/plantilla :: header"/>
         <a th:href="@{/}">Regresar</a>
         <hr/>
-         <form th:action="@{/estado/guardar}"
+        <form th:action="@{/estado/guardar}"
               method="post"
               th:object="${estado}">
 
-                <input type="hidden" name="idEstado" th:field="*{idEstado}"/>
-                <fieldset>
-                    <label for="NombrePais">Nombre Pais</label>
-                    <input type="text" name="NombrePais" th:field="*{NombrePais}"/>
-                </fieldset>
-                <fieldset>
-                    <label for="Capital">Capital</label>
-                    <input type="text" name="Capital" th:field="*{Capital}"/>
-                </fieldset>
-                <fieldset>
-                    <label for="Poblacion">Poblacion</label>
-                    <input type="number" name="Poblacion" th:field="*{Poblacion}"/>
-                </fieldset>
-                <fieldset>
-                    <label for="Costas">Costas</label>
-                    <input type="number" name="Costas" th:field="*{Costas}"/>
-                </fieldset>
-                <hr/>
-                <input type="submit" value="Guardar" name="guardar"/>           
-            </form>
-        <!-- comment<footer th:replace="layout/plantilla :: footer"/>  -->
-    </body>
-    
+            <input type="hidden" name="idEstado" th:field="*{idEstado}"/>
+            <fieldset>
+                <label for="NombrePais">Nombre Pais</label>
+                <input type="text" name="NombrePais" th:field="*{NombrePais}"/>
+            </fieldset>
+            <fieldset>
+                <label for="Capital">Capital</label>
+                <input type="text" name="Capital" th:field="*{Capital}"/>
+            </fieldset>
+            <fieldset>
+                <label for="Poblacion">Poblacion</label>
+                <input type="number" name="Poblacion" th:field="*{Poblacion}"/>
+            </fieldset>
+            <fieldset>
+                <label for="Costas">Costas</label>
+                <input type="number" name="Costas" th:field="*{Costas}"/>
+            </fieldset>
+            <hr/>
+            <input type="submit" value="Guardar" name="guardar"/>           
+        </form>
+        <footer th:replace="layout/plantilla :: footer"/> 
+
 </html>
