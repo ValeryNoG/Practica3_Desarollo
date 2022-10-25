@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml"> 
+    <head>
+        <title>Practica 3</title>
+        <meta charset="UTF-8"/>
+        
+    </head>
+    <body>
+         <h2>Informacion de clientes</h2>
+        <a th:href="@{/}">Regresar</a>
+        <hr>
+            <form
+                th:action="@{/pais/guardar}"
+                method="post"
+                th:object="${pais}">
+
+                <input type="hidden" name="idPais" th:field="*{id_Pais}"/>
+                <fieldset>
+                    <label for="nombre">Nombre Pais</label>
+                    <input type="text" name="NombrePais" th:field="*{NombrePais}"/>
+                </fieldset>
+                <fieldset>
+                    <label for="apellidos">Capital</label>
+                    <input type="text" name="Capital" th:field="*{Capital}"/>
+                </fieldset>
+                <fieldset>
+                    <label for="correo">Poblacion</label>
+                    <input type="tel" name="Poblacion" th:field="*{Poblacion}"/>
+                </fieldset>
+                <fieldset>
+                    <label for="telefono">Costas</label>
+                    <input type="tel" name="Costas" th:field="*{Costas}"/>
+                </fieldset>
+                <hr/>
+                <input type="submit" value="Guardar" name="guardar"/>           
+            </form>
+            
+    </body>
+    </body>
+</html>
