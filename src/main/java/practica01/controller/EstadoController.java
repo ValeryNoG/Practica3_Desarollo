@@ -29,7 +29,7 @@ public class EstadoController {
         return "redirect:/";
     }
 
-    @GetMapping("/estado/modificar{idEstado}")
+    @GetMapping("/estado/modificar/{idEstado}")
     public String estadoModificar(Estado estado,Model model){
        estado=estadoService.getEstado(estado);
        model.addAttribute("estado",estado);
