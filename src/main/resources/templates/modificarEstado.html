@@ -13,33 +13,32 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <body>
          <h2>Informacion de clientes</h2>
         <a th:href="@{/}">Regresar</a>
-        <hr>
-            <form
-                th:action="@{/pais/guardar}"
-                method="post"
-                th:object="${pais}">
+        <hr/>
+        <form th:action="@{/estado/guardar}"
+              method="post"
+              th:object="${estado}">
 
-                <input type="hidden" name="idPais" th:field="*{id_Pais}"/>
+                <input type="hidden" name="idEstado" th:field="*{idEstado}"/>
                 <fieldset>
-                    <label for="nombre">Nombre Pais</label>
+                    <label for="NombrePais">Nombre Pais</label>
                     <input type="text" name="NombrePais" th:field="*{NombrePais}"/>
                 </fieldset>
                 <fieldset>
-                    <label for="apellidos">Capital</label>
+                    <label for="Capital">Capital</label>
                     <input type="text" name="Capital" th:field="*{Capital}"/>
                 </fieldset>
                 <fieldset>
-                    <label for="correo">Poblacion</label>
-                    <input type="tel" name="Poblacion" th:field="*{Poblacion}"/>
+                    <label for="Poblacion">Poblacion</label>
+                    <input type="number" name="Poblacion" th:field="*{Poblacion}"/>
                 </fieldset>
                 <fieldset>
-                    <label for="telefono">Costas</label>
-                    <input type="tel" name="Costas" th:field="*{Costas}"/>
+                    <label for="Costas">Costas</label>
+                    <input type="number" name="Costas" th:field="*{Costas}"/>
                 </fieldset>
                 <hr/>
                 <input type="submit" value="Guardar" name="guardar"/>           
             </form>
-            
+        <!-- comment<footer th:replace="layout/plantilla :: footer"/>  -->
     </body>
-    </body>
+    
 </html>

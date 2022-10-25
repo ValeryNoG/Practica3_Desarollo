@@ -5,18 +5,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import practica01.service.PaisService;
+import practica01.service.EstadoService;
 
 @Controller 
 @Slf4j
 public class IndexController {
     @Autowired
-    private PaisService paisService;
+    private EstadoService estadoService;
     @GetMapping("/")
     public String inicio(Model model){
         
-        var paises=paisService.getPaises();
-        model.addAttribute("pais" , paises);
+        var estados=estadoService.getEstados();
+        model.addAttribute("estados" , estados);
         return "index";
     }
 }

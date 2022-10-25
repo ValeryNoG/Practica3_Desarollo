@@ -5,14 +5,14 @@
 package practica01.service;
 
 import java.util.List;
-import practica01.domain.Pais;
+import practica01.domain.Estado;
 
-public interface PaisService {
-    public List<Pais> getPaises();
+public interface EstadoService {
+    public List<Estado> getEstados();
 
-    public Pais getPais(Pais pais);
+    public Estado getEstado(Estado estado);
 
-    public void save(Pais pais);
+    public void save(Estado estado);
 
-    public void delete(Pais pais);
+    public void delete(Estado estado);
 }

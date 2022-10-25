@@ -8,13 +8,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <head>
         <title>Practica 3</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <!--  <meta name="viewport" content="width=device-width, initial-scale=1.0">--> 
     </head>
     <body>
         <!--   <header th:replace="layout/plantilla :: header"/> -->
         <h2>Informacion de Paises</h2>
-        <a th:href="@{/pais/nuevo}">Nuevo Pais</a>
-        <div th:if="${paises !=null and !paises.empty}">
+        <a th:href="@{/estado/nuevo}">Nuevo Estado</a>
+        <div th:if="${estados !=null and !estados.empty}">
             <table border="1">
                 <tr>
                     <th>Nombre Pais</th>
@@ -24,17 +24,17 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <th>Eliminar</th>
                     <th>Modificar</th>
                 </tr>
-                <tr th:each="pais: ${paises}">
-                    <td>[[${pais.NombrePais}]]</td>
-                    <td>[[${pais.Capital}]]</td>
-                    <td>[[${pais.Poblacion}]]</td>
-                    <td>[[${pais.Costas}]]</td>
-                    <td><a th:href="@{/pais/eliminar/}+${pais.idPais}">Eliminar</td>
-                    <td><a th:href="@{/pais/modificar/}+${pais.idPais}">Modificar</td>
+                <tr th:each="estado: ${estados}">
+                    <td>[[${estado.NombrePais}]]</td>
+                    <td>[[${estado.Capital}]]</td>
+                    <td>[[${estado.Poblacion}]]</td>
+                    <td>[[${estado.Costas}]]</td>
+                    <td><a th:href="@{/estado/eliminar/}+${estado.idEstado}">Eliminar</td>
+                    <td><a th:href="@{/estado/modificar/}+${estado.idEstado}">Modificar</td>
             </table>
         </div>
-        <div th:if="${paises ==null or paises.empty}">
-            <h2>------------No hay clientes que mostrar---------------</h2>
+        <div th:if="${estados ==null or estados.empty}">
+            <h2>------------No hay paises que mostrar---------------</h2>
          </div>
         <!--  <footer th:replace="layout/plantilla :: footer"/>-->
     </body>
