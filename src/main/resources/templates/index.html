@@ -17,7 +17,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <div th:if="${estados !=null and !estados.empty}">
             <table border="1">
                 <tr>
-                    <th>Nombre Pais</th>
+                    <th>NombrePais</th>
                     <th>Capital</th>
                     <th>Poblacion</th>
                     <th>Costas</th>
@@ -25,7 +25,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <th>Modificar</th>
                 </tr>
                 <tr th:each="estado: ${estados}">
-                    <td>[[${estado.NombrePais}]]</td>
+                    <!-- comment  <td>[[${estado.NombrePais}]]</td>-->
                     <td>[[${estado.Capital}]]</td>
                     <td>[[${estado.Poblacion}]]</td>
                     <td>[[${estado.Costas}]]</td>

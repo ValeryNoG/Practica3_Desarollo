@@ -25,7 +25,7 @@ public class Estado implements Serializable{
     public Estado() {
     }
 
-    public Estado(Long id_pais, String NombrePais, String Capital, int Poblacion, int Costas) {
+    public Estado( String NombrePais, String Capital, int Poblacion, int Costas) {
         
         this.NombrePais = NombrePais;
         this.Capital = Capital;
